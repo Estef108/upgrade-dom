@@ -58,8 +58,11 @@ body.appendChild(lista);
 
 // 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
 
+const fnRemove = Array.from(document.querySelectorAll('.fn-remove-me'));
 
-// console.log(body);
+for (let i = 0; i < fnRemove.length; i++){
+	body.removeChild(fnRemove[i])
+}
 
 // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div.
 // 	Recuerda que no solo puedes insertar elementos con .appendChild. 
